@@ -17,11 +17,7 @@ $(document).ready(function()
 
     //$('html').addClass('outlineHelper');
 
-    $('.js-page-welcome-btn').on('click', function(event){
-        event.preventDefault();
-        $('.js-page-welcome').hide();
-        $('.js-page-page2').show();
-    });
+
 
 
 });
