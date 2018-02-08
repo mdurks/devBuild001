@@ -32,11 +32,6 @@ html {
 	font-family: $font-body;
 }
 
-.whiteBckgrnd {
-	background-color: #fff;
-	color: $grey;
-}
-
 .mainColumn
 {
 	@include media($md) {
@@ -47,34 +42,52 @@ html {
 
 
 
-.page-welcome
+.mainNav
 {
-	&__heroHeading
-	{
-		text-align: center;
+	@include clearfix;
 
-		@include media($md) {
+	li {
+		float: left;
+	}
 
-			&__bckgImg {
-				position: absolute;
-				z-index: -1;
-				top: 0;
-				left: 0;
-				bottom: 0;
-				right: 0;
-				background-image: url('../img/welcomeHero.jpg');
-				background-repeat: no-repeat;
-				background-position: center center;
-				opacity: 0.4;
-			}
+	a {
+		display: block;
+	}
+}
+
+
+
+.heroHeading
+{
+	text-align: center;
+
+	@include media($md) {
+
+		&__bckgImg {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-image: url('../img/welcomeHero.jpg');
+			background-repeat: no-repeat;
+			background-position: center center;
+			opacity: 0.4;
 		}
 	}
-	&__bodyCopy {
-		padding: 40px 0;
-	}
-	&__footer {
-		text-align: center;
-	}
+}
+
+
+
+.bodyCopy {
+	padding: 40px 0;
+}
+
+
+
+.footer {
+	text-align: center;
 }
 
 

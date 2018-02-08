@@ -60,11 +60,6 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.whiteBckgrnd {
-  background-color: #fff;
-  color: #333238;
-}
-
 @media screen and (min-width: 800px) {
   .mainColumn {
     width: 1000px;
@@ -72,12 +67,26 @@ html {
   }
 }
 
-.page-welcome__heroHeading {
+.mainNav::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.mainNav li {
+  float: left;
+}
+
+.mainNav a {
+  display: block;
+}
+
+.heroHeading {
   text-align: center;
 }
 
 @media screen and (min-width: 800px) {
-  .page-welcome__heroHeading__bckgImg {
+  .heroHeading__bckgImg {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -91,10 +100,10 @@ html {
   }
 }
 
-.page-welcome__bodyCopy {
+.bodyCopy {
   padding: 40px 0;
 }
 
-.page-welcome__footer {
+.footer {
   text-align: center;
 }
