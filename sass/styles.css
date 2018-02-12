@@ -50,6 +50,36 @@ html {
           box-sizing: inherit;
 }
 
+@font-face {
+  font-family: 'montserratbold';
+  src: url("/fonts/montserrat-bold.eot");
+  src: url("/fonts/montserrat-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-bold.woff2") format("woff2"), url("/fonts/montserrat-bold.woff") format("woff"), url("/fonts/montserrat-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'montserratmedium';
+  src: url("/fonts/montserrat-medium.eot");
+  src: url("/fonts/montserrat-medium.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-medium.woff2") format("woff2"), url("/fonts/montserrat-medium.woff") format("woff"), url("/fonts/montserrat-medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'montserratregular';
+  src: url("/fonts/montserrat-regular.eot");
+  src: url("/fonts/montserrat-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-regular.woff2") format("woff2"), url("/fonts/montserrat-regular.woff") format("woff"), url("/fonts/montserrat-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'playfair_displaybold';
+  src: url("/fonts/playfairdisplay-bold.eot");
+  src: url("/fonts/playfairdisplay-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/playfairdisplay-bold.woff2") format("woff2"), url("/fonts/playfairdisplay-bold.woff") format("woff"), url("/fonts/playfairdisplay-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'playfair_displayregular';
+  src: url("/fonts/playfairdisplay-regular.eot");
+  src: url("/fonts/playfairdisplay-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/playfairdisplay-regular.woff2") format("woff2"), url("/fonts/playfairdisplay-regular.woff") format("woff"), url("/fonts/playfairdisplay-regular.ttf") format("truetype");
+}
+
 .outlineHelper * {
   outline: 1px dotted rgba(186, 119, 119, 0.2);
 }
@@ -57,7 +87,7 @@ html {
 html {
   background-color: #fff;
   color: #666666;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "montserratmedium";
 }
 
 body {
@@ -76,7 +106,7 @@ h2, h3 {
 }
 
 p {
-  margin: 0 0 20px;
+  margin: 0 0 25px;
 }
 
 p:last-of-type {
@@ -84,28 +114,32 @@ p:last-of-type {
 }
 
 .heading--one {
-  font-size: 30px;
+  font-family: "playfair_displayregular";
+  font-size: 38px;
   text-align: center;
 }
 
 .heading--one span {
-  font-weight: bold;
+  font-family: "playfair_displaybold";
 }
 
 .heading--two {
+  font-family: "playfair_displaybold";
   font-weight: bold;
-  font-size: 22px;
+  font-size: 23px;
   text-align: center;
   color: #122140;
 }
 
 .paraLead--large {
+  font-family: "playfair_displayregular";
   font-size: 20px;
   line-height: 1.5em;
   color: #122140;
 }
 
 .paraLead--medium {
+  font-family: "playfair_displayregular";
   font-size: 17px;
   font-weight: bold;
   line-height: 1.5em;
@@ -121,8 +155,8 @@ hr {
 }
 
 .logo {
-  margin: 7px 0 0;
-  width: 240px;
+  margin: 11px 0 0;
+  width: 266px;
   height: 60px;
   text-indent: -999999px;
   background-image: url("../img/forbes-logo.svg");
@@ -191,6 +225,28 @@ hr {
   }
 }
 
+.heroHeading p {
+  margin: 0 0 17px;
+  font-family: "playfair_displaybold";
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.heroHeading h1:after {
+  bottom: -50px;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #fff;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
 .heroHeading__bckgImg:before {
   background: -moz-linear-gradient(top, transparent 0%, transparent 37%, rgba(0, 0, 0, 0.65) 100%);
   background: -webkit-linear-gradient(top, transparent 0%, transparent 37%, rgba(0, 0, 0, 0.65) 100%);
@@ -201,7 +257,7 @@ hr {
 }
 
 .bodyCopy {
-  padding: 40px 0;
+  padding: 50px 0;
 }
 
 .footer {
@@ -212,15 +268,36 @@ hr {
   color: #fff;
 }
 
-.footer .top,
-.footer .bottom {
-  padding: 30px 0;
-}
-
 .footer .top {
+  padding: 50px;
   background-color: #88909F;
 }
 
+.footer .top::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.footer .top .mainColumn {
+  padding: 0 70px;
+}
+
+.footer .top .col {
+  float: left;
+  width: 50%;
+}
+
 .footer .bottom {
+  padding: 30px;
   background-color: #122140;
+}
+
+.footer .bottom .mainColumn {
+  padding: 0 70px;
+}
+
+.footer hr {
+  margin-left: -70px;
+  margin-right: -70px;
 }

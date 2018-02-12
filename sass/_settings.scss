@@ -2,13 +2,25 @@
 
 
 // Colours
-$grey:          #666666;
 $grey-light:    #cccccc;
+$grey:          #666666;
+
+$blue:          #88909F;
+$blue-dark:     #122140;
+
 $white:         #fff;
 $black:         #000;
-$blue-dark:     #122140;
-$blue:          #88909F;
+
 
 
 // Fonts
-$font-body: Arial, Helvetica, sans-serif;
+$font-montserrat-bold: 'montserratbold';
+$font-montserrat-medium: 'montserratmedium';
+$font-montserrat: 'montserratregular';
+
+$font-playfair-bold: 'playfair_displaybold';
+$font-playfair: 'playfair_displayregular';
+
+$font-body: $font-montserrat-medium;
+$font-header: $font-playfair-bold;
+$font-header-light: $font-playfair;
