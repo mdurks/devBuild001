@@ -17,7 +17,15 @@ $(document).ready(function()
 
     //$('html').addClass('outlineHelper');
 
+    function toggleMobileMenu()
+    {
+        $('.mainNav .navList').fadeToggle();
+        $('body').toggleClass('noScroll');
+    }
 
+    $('.showMobileMenu, .mainNav .navList a, .mainNav .close').click(function(){
+        toggleMobileMenu();
+    });
 
 
 });

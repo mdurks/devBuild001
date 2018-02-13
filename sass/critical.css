@@ -34,7 +34,7 @@ ol, ul {
   list-style: none;
 }
 
-div, p, span, ul, li {
+nav, main, footer, header, div, p, span, ul, li {
   position: relative;
 }
 
