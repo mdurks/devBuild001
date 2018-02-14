@@ -23,8 +23,10 @@ $(document).ready(function()
         $('body').toggleClass('noScroll');
     }
 
-    $('.showMobileMenu, .mainNav .navList a, .mainNav .close').click(function(){
-        toggleMobileMenu();
+    $('.showMobileMenu, .mainNav .navList a, .mainNav .closeBtn').click(function(){
+        if(window.innerWidth <= 800) {
+            toggleMobileMenu();
+        }
     });
 
 
