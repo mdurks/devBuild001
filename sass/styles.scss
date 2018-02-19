@@ -77,6 +77,12 @@ p
 	}
 }
 
+a
+{
+	color: $blue-dark;
+	font-family: $font-body-bold;
+}
+
 
 
 .heading
@@ -112,7 +118,8 @@ p
 		}
 	}
 
-	&--three
+	&--three,
+	&--three .anchorDestination
 	{
 		margin: 0 0 5px;
 		font-family: $font-header;
@@ -189,6 +196,41 @@ p
 .smallPara p
 {
 	font-size: 12px;
+}
+
+
+
+.bulletList
+{
+	margin: 0 0 30px 40px;
+	list-style-type: disc;
+}
+
+
+
+.anchorList
+{
+	margin: 0 0 15px;
+
+	a {
+		display: block;
+	}
+
+	@include media($md)
+	{
+		a {
+			width: 49%;
+			display: inline-block;
+		}
+	}
+
+}
+
+
+
+.spacer {
+	display: block;
+	height: 60px;
 }
 
 

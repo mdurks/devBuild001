@@ -137,6 +137,11 @@ p:last-of-type {
   }
 }
 
+a {
+  color: #122140;
+  font-family: "montserratbold";
+}
+
 .heading--one {
   font-family: "playfair_displayregular";
   font-size: 30px;
@@ -170,7 +175,8 @@ p:last-of-type {
   }
 }
 
-.heading--three {
+.heading--three,
+.heading--three .anchorDestination {
   margin: 0 0 5px;
   font-family: "playfair_displaybold";
   font-size: 16px;
@@ -179,7 +185,8 @@ p:last-of-type {
 }
 
 @media screen and (min-width: 800px) {
-  .heading--three {
+  .heading--three,
+  .heading--three .anchorDestination {
     font-size: 17px;
     line-height: 1.5em;
   }
@@ -241,6 +248,31 @@ p:last-of-type {
 
 .smallPara p {
   font-size: 12px;
+}
+
+.bulletList {
+  margin: 0 0 30px 40px;
+  list-style-type: disc;
+}
+
+.anchorList {
+  margin: 0 0 15px;
+}
+
+.anchorList a {
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  .anchorList a {
+    width: 49%;
+    display: inline-block;
+  }
+}
+
+.spacer {
+  display: block;
+  height: 60px;
 }
 
 hr {
