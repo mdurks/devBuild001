@@ -30,4 +30,23 @@ $(document).ready(function()
     });
 
 
+
+    $('.accordion-item').click(function()
+    {
+        var self = this;
+
+        $(self).parent().find('.active .content').slideUp(function()
+        {
+            if(window.innerWidth <= 800) {
+                var scrollTo = $(self).offset().top;
+                $("html, body").animate({ scrollTop: scrollTo });
+            }
+
+            $('.accordion-item').removeClass('active');
+            $(self).addClass('active').find('.content').slideDown();
+        });
+    });
+
+
+
 });

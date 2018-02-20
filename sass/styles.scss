@@ -202,8 +202,34 @@ a
 
 .bulletList
 {
-	margin: 0 0 30px 40px;
+	margin: 0 0 20px 27px;
 	list-style-type: disc;
+
+	@include media($md){
+		margin: 0 0 20px 40px;
+	}
+
+	&.unindented
+	{
+		margin-left: 16px;
+		color: $blue-dark;
+
+		li {
+			font-size: 14px;
+		}
+	}
+}
+
+li
+{
+	padding: 0 0 10px 3px;
+	font-size: 14px;
+	line-height: 1.8em;
+
+	@include media($md){
+		font-size: 16px;
+		line-height: 1.6em;
+	}
 }
 
 
@@ -394,10 +420,31 @@ hr
 		left: 0;
 		bottom: 0;
 		right: 0;
-		background-image: url('../img/header-home.jpg');
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
+
+		&--home {
+			background-image: url('../img/header-home.jpg');
+		}
+		&--benefits {
+			background-image: url('../img/header-benefits.jpg');
+		}
+		&--scheme-summary {
+			background-image: url('../img/header-scheme-summary.jpg');
+		}
+		&--information {
+			background-image: url('../img/header-information.jpg');
+		}
+		&--about-us {
+			background-image: url('../img/header-home.jpg');
+		}
+		&--contact {
+			background-image: url('../img/header-home.jpg');
+		}
+		&--faq {
+			background-image: url('../img/header-faq.jpg');
+		}
 	}
 
 	p
@@ -464,6 +511,69 @@ hr
 
 	@include media($md) {
 		padding: 50px 0;
+	}
+}
+
+
+
+
+.lead-with-accordion
+{
+	@include media($upto-md)
+	{
+		padding-top: 10px;
+	}
+}
+
+.accordion-item
+{
+	.title
+	{
+		margin: 20px 0;
+		padding: 8px 45px 8px 0;
+		font-size: 18px;
+		line-height: 22px;
+		font-family: $font-body-bold;
+		color: $blue-dark;
+		text-transform: uppercase;
+		cursor: pointer;
+		border-bottom: 1px solid $blue-dark;
+
+		@include media($md)
+		{
+			font-size: 22px;
+		}
+
+		&:after {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 30px;
+			height: 30px;
+			background-color: $blue;
+			content: "+";
+			color: $white;
+			font-size: 32px;
+			line-height: 32px;
+			text-align: center;
+		}
+	}
+
+	.content {
+		display: none;
+	}
+
+	&:first-of-type .content {
+		display: block;
+	}
+
+	&.active
+	{
+		.title:after {
+			content: "-";
+			line-height: 28px;
+		}
 	}
 }
 

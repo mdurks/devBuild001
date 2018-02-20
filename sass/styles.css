@@ -251,8 +251,36 @@ a {
 }
 
 .bulletList {
-  margin: 0 0 30px 40px;
+  margin: 0 0 20px 27px;
   list-style-type: disc;
+}
+
+@media screen and (min-width: 800px) {
+  .bulletList {
+    margin: 0 0 20px 40px;
+  }
+}
+
+.bulletList.unindented {
+  margin-left: 16px;
+  color: #122140;
+}
+
+.bulletList.unindented li {
+  font-size: 14px;
+}
+
+li {
+  padding: 0 0 10px 3px;
+  font-size: 14px;
+  line-height: 1.8em;
+}
+
+@media screen and (min-width: 800px) {
+  li {
+    font-size: 16px;
+    line-height: 1.6em;
+  }
 }
 
 .anchorList {
@@ -438,11 +466,38 @@ hr {
   left: 0;
   bottom: 0;
   right: 0;
-  background-image: url("../img/header-home.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   -moz-background-size: cover;
        background-size: cover;
+}
+
+.heroHeading__bckgImg--home {
+  background-image: url("../img/header-home.jpg");
+}
+
+.heroHeading__bckgImg--benefits {
+  background-image: url("../img/header-benefits.jpg");
+}
+
+.heroHeading__bckgImg--scheme-summary {
+  background-image: url("../img/header-scheme-summary.jpg");
+}
+
+.heroHeading__bckgImg--information {
+  background-image: url("../img/header-information.jpg");
+}
+
+.heroHeading__bckgImg--about-us {
+  background-image: url("../img/header-home.jpg");
+}
+
+.heroHeading__bckgImg--contact {
+  background-image: url("../img/header-home.jpg");
+}
+
+.heroHeading__bckgImg--faq {
+  background-image: url("../img/header-faq.jpg");
 }
 
 .heroHeading p {
@@ -514,6 +569,58 @@ hr {
   .bodyCopy {
     padding: 50px 0;
   }
+}
+
+@media screen and (max-width: 800px) {
+  .lead-with-accordion {
+    padding-top: 10px;
+  }
+}
+
+.accordion-item .title {
+  margin: 20px 0;
+  padding: 8px 45px 8px 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "montserratbold";
+  color: #122140;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 1px solid #122140;
+}
+
+@media screen and (min-width: 800px) {
+  .accordion-item .title {
+    font-size: 22px;
+  }
+}
+
+.accordion-item .title:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #88909F;
+  content: "+";
+  color: #fff;
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.accordion-item .content {
+  display: none;
+}
+
+.accordion-item:first-of-type .content {
+  display: block;
+}
+
+.accordion-item.active .title:after {
+  content: "-";
+  line-height: 28px;
 }
 
 .footer {
