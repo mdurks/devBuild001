@@ -254,6 +254,24 @@ li
 
 
 
+
+.col2
+{
+	@include media($md){
+		float: left;
+		width: 50%;
+	}
+}
+.col3
+{
+	@include media($md){
+		float: left;
+		width: 33.3%;
+	}
+}
+
+
+
 .spacer {
 	display: block;
 	height: 60px;
@@ -264,6 +282,11 @@ li
 hr
 {
 	margin: 30px 0;
+}
+
+
+.clearfix {
+	@include clearfix;
 }
 
 
@@ -437,10 +460,10 @@ hr
 			background-image: url('../img/header-information.jpg');
 		}
 		&--about-us {
-			background-image: url('../img/header-home.jpg');
+			background-image: url('../img/header-about.jpg');
 		}
 		&--contact {
-			background-image: url('../img/header-home.jpg');
+			background-image: url('../img/header-contact.jpg');
 		}
 		&--faq {
 			background-image: url('../img/header-faq.jpg');

@@ -298,6 +298,20 @@ li {
   }
 }
 
+@media screen and (min-width: 800px) {
+  .col2 {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .col3 {
+    float: left;
+    width: 33.3%;
+  }
+}
+
 .spacer {
   display: block;
   height: 60px;
@@ -305,6 +319,12 @@ li {
 
 hr {
   margin: 30px 0;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 .ForbesLogo {
@@ -489,11 +509,11 @@ hr {
 }
 
 .heroHeading__bckgImg--about-us {
-  background-image: url("../img/header-home.jpg");
+  background-image: url("../img/header-about.jpg");
 }
 
 .heroHeading__bckgImg--contact {
-  background-image: url("../img/header-home.jpg");
+  background-image: url("../img/header-contact.jpg");
 }
 
 .heroHeading__bckgImg--faq {
