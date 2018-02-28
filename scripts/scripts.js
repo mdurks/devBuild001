@@ -38,13 +38,22 @@ $(document).ready(function()
         $(self).parent().find('.active .content').slideUp(function()
         {
             if(window.innerWidth <= 800) {
-                var scrollTo = $(self).offset().top;
+                var scrollTo = $(self).offset().top - 7;
                 $("html, body").animate({ scrollTop: scrollTo });
             }
 
             $('.accordion-item').removeClass('active');
             $(self).addClass('active').find('.content').slideDown();
         });
+    });
+
+
+    $(".anchorList a").click(function (e)
+    {
+        e.preventDefault();
+        var target = 'a[name="' + $(this).attr('href').slice(1) + '"]';
+        var dest = $(target).offset().top - 10;
+        $("html, body").animate({ scrollTop: dest }, 'slow');
     });
 
 

@@ -45,8 +45,29 @@
 
     <main class="bodyCopy">
         <div class="mainColumn">
-            <h2 class="heading--two">You can use the contact form below to ontact the Forbes Retirement Benefits Scheme Administrator:</h2>
-            <p>Contact form here...</p>
+            <h2 class="heading--two">You can use the contact form below to contact the Forbes Retirement Benefits Scheme Administrator:</h2>
+
+            <form action="" class="formContainer">
+                <div>
+                    <select class="title formFieldStyling">
+                        <option value="" disabled selected>Title</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                    </select>
+                    <input class="name formFieldStyling" type="text" placeholder="Full name" maxlength="30">
+                </div>
+                <div>
+                    <input class="tel formFieldStyling" type="number" placeholder="Telephone number" maxlength="15" required>
+                    <input class="email formFieldStyling" type="email" placeholder="Email address" maxlength="50" required>
+                </div>
+                <div>
+                    <textarea class="msg formFieldStyling" placeholder="Please enter the details of your enquiry here..." rows="4" maxlength="500"></textarea>
+                </div>
+                <div>
+                    <input type="submit" class="submit" value="Send request">
+                </div>
+            </form>
 
             <hr>
 

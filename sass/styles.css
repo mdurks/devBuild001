@@ -298,11 +298,19 @@ li {
   }
 }
 
+.col2 {
+  margin: 0 0 20px;
+}
+
 @media screen and (min-width: 800px) {
   .col2 {
     float: left;
     width: 50%;
   }
+}
+
+.col3 {
+  margin: 0 0 20px;
 }
 
 @media screen and (min-width: 800px) {
@@ -588,6 +596,71 @@ hr {
 @media screen and (min-width: 800px) {
   .bodyCopy {
     padding: 50px 0;
+  }
+}
+
+.formContainer .formFieldStyling {
+  margin: 0 7px 17px 0;
+  padding: 15px;
+  width: 100%;
+  border: 1px solid #88909F;
+  font-family: "montserratmedium";
+  line-height: 1.7em;
+  color: #122140;
+}
+
+.formContainer select.formFieldStyling {
+  padding: 18px 15px;
+}
+
+.formContainer textarea::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+.formContainer input[type=number]::-webkit-inner-spin-button,
+.formContainer input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.formContainer .submit {
+  display: block;
+  margin: auto;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #666666;
+  -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
+          border-radius: 20px;
+  font-family: "montserratbold";
+}
+
+@media screen and (min-width: 800px) {
+  .formContainer {
+    margin: auto;
+    width: 80%;
+  }
+  .formContainer .title {
+    width: 15%;
+  }
+  .formContainer .name {
+    width: 75%;
+  }
+  .formContainer .tel {
+    width: 30%;
+  }
+  .formContainer .email {
+    width: 60%;
+  }
+  .formContainer .msg {
+    width: 91.35%;
+    margin-bottom: 60px;
+  }
+  .formContainer .submit {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    margin-right: 8%;
   }
 }
 

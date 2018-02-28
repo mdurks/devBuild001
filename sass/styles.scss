@@ -257,6 +257,8 @@ li
 
 .col2
 {
+	margin: 0 0 20px;
+
 	@include media($md){
 		float: left;
 		width: 50%;
@@ -264,6 +266,8 @@ li
 }
 .col3
 {
+	margin: 0 0 20px;
+
 	@include media($md){
 		float: left;
 		width: 33.3%;
@@ -538,6 +542,56 @@ hr
 }
 
 
+
+.formContainer
+{
+	.formFieldStyling {
+		margin: 0 7px 17px 0;
+		padding: 15px;
+		width: 100%;
+		border: 1px solid $blue;
+		font-family: $font-body;
+		line-height: 1.7em;
+		color: $blue-dark;
+	}
+	select.formFieldStyling {
+		padding: 18px 15px;
+	}
+	textarea::-webkit-input-placeholder {
+		font-style: italic;
+	}
+	input[type=number]::-webkit-inner-spin-button,
+	input[type=number]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	.submit {
+		display: block;
+		margin: auto;
+		padding: 10px 20px;
+		background-color: #fff;
+		border: 1px solid $grey;
+		border-radius: 20px;
+		font-family: $font-body-bold;
+	}
+	@include media($md)
+	{
+		margin: auto;
+		width: 80%;
+
+		.title 	{ width: 15%; }
+		.name 	{ width: 75%; }
+		.tel 	{ width: 30%; }
+		.email 	{ width: 60%; }
+		.msg 	{ width: 91.35%; margin-bottom: 60px; }
+		.submit {
+			position: absolute;
+			right: 0;
+			bottom: 10px;
+			margin-right: 8%;
+		}
+	}
+}
 
 
 .lead-with-accordion
