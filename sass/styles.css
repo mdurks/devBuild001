@@ -142,6 +142,10 @@ a {
   font-family: "montserratbold";
 }
 
+a[href^="tel"] {
+  text-decoration: none;
+}
+
 .heading--one {
   font-family: "playfair_displayregular";
   font-size: 30px;

@@ -82,6 +82,9 @@ a
 	color: $blue-dark;
 	font-family: $font-body-bold;
 }
+a[href^="tel"] {
+	text-decoration: none;
+}
 
 
 
